@@ -1,7 +1,8 @@
 import express from "express";
+import RestaurantsCtrl from "./restaurants.controller.js"
 
 const router = express.Router();
 
-router.route("/").get((req, res) => res.send("hello world")); //demonstration route
+router.route("/").get(RestaurantsCtrl.apiGetRestaurants); //demonstration route
 
 export default router;
