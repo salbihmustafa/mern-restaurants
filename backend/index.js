@@ -24,5 +24,3 @@ MongoClient.connect(
         console.log(`listening on port ${port}`)
     }) //app.listen is how you start web server
 });
-
-//change
