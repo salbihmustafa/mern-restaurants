@@ -1,13 +1,38 @@
+Quick Tips:
+Start server: Inside the backend directory, run "nodemon server"
+
 Backend -
 1. create a folder called backend
+
 2. cd backend
+
 3. npm init -y (this is so you create a package.json file inside backend directory)
+
 4. now install a few dependencies, npm install express cors mongodb dotenv
     express - What we use for the web server
     cors - cross origin resource sharing, this will help make the right connections without errors
     mongodb - so you can interact with the database
     dotenv - loads environmental variables from a .env file
+
 5. npm install -g nodemon
     nodemon - helps restart the node application without restarting the server whenever files are changed
 
-Start server: Inside the backend directory, run "nodemon server"
+6. Go into the package.json file and add "type": "module" (this will allow us to use the import statements from es6)
+
+7. create a file server.js
+
+8. create a .env file, need to find the URI, which can be found in the mongodb, connect, connect your application, copy the URI.
+
+9. create a file index.js (this file will connect to the database and start the server)
+
+10. create a new folder called api
+
+11. inside the api folder, create restaurants.route.js
+
+12. now test the backend server, go to the backend directory in your terminal, type "nodemon server" 
+(use a demonstration route -> router.route("/").get((req, res) => res.send("hello world")); //demonstration route)
+
+13. In your web browser, go to http://localhost:5000/api/v1/restaurants -> the 5000 is the port in your .env file
+
+Go to your google keeps, go to the video, left off at 24.39. You're about to create the dao folder.
+

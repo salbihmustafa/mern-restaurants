@@ -1,13 +1,14 @@
-import app from "./server.js";
-import mongodb from "mongodb";
-import dotenv from "dotenv";
-import RestaurantsDAO from "./dao/restaurantsDAO";
+import app from "./server.js"; //import the module
+import mongodb from "mongodb"; //because we will access mongodb
+import dotenv from "dotenv"; //allows us to access our .env variables
+import RestaurantsDAO from "./dao/restaurantsDAO.js";
 
-dotenv.config();
+dotenv.config(); 
 const MongoClient = mongodb.MongoClient;
 
 const port = process.env.PORT || 8000; //access from .env
 
+//connect to the database
 MongoClient.connect(
     process.env.RESTREVIEWS_DB_URI,
     {
@@ -21,8 +22,9 @@ MongoClient.connect(
     process.exit(1);
 })
 .then(async client => {
+    //once we have connected to the database
     await RestaurantsDAO.injectDB(client);
-    app.listen(port, () => {
+    app.listen(port, () => { //how we start our web server
         console.log(`listening on port ${port}`)
     }) //app.listen is how you start web server
 });
