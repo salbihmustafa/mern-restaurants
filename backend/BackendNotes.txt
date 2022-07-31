@@ -1,0 +1,13 @@
+Backend -
+1. create a folder called backend
+2. cd backend
+3. npm init -y (this is so you create a package.json file inside backend directory)
+4. now install a few dependencies, npm install express cors mongodb dotenv
+    express - What we use for the web server
+    cors - cross origin resource sharing, this will help make the right connections without errors
+    mongodb - so you can interact with the database
+    dotenv - loads environmental variables from a .env file
+5. npm install -g nodemon
+    nodemon - helps restart the node application without restarting the server whenever files are changed
+
+Start server: Inside the backend directory, run "nodemon server"
