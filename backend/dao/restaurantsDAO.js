@@ -1,4 +1,4 @@
-let restaurants;
+let restaurants; //use to store a reference to the database
 
 export default class RestaurantsDAO {
   //when server gets started, injectDB will get called
@@ -19,26 +19,26 @@ export default class RestaurantsDAO {
   }
 
   static async getRestaurants({
-    filters = null,
-    page = 0,
-    restaurantsPerPage = 20,
+    filters = null, //this is made up option
+    page = 0, //this is made up option (first page)
+    restaurantsPerPage = 20, //this is made up option (20 restaurants per page)
   } = {}) {
     let query;
     if (filters) {
       //search query - $eq is equals - $text - anywhere in the text, search for it.
       if ("name" in filters) {
-        query = { $text: { $search: filters["name"] } };
+        query = { $text: { $search: filters["name"] } }; //search by name (text search will need to be set up in mongodb)
       } else if ("cuisine" in filters) {
-        query = { cuisine: { $eq: filters["cuisine"] } };
+        query = { "cuisine": { $eq: filters["cuisine"] } }; //search by cuisine
       } else if ("zipcode" in filters) {
-        query = { "address.zipcode": { $eq: filters["zipcode"] } };
+        query = { "address.zipcode": { $eq: filters["zipcode"] } }; //search by zipcode
       }
     }
 
     let cursor;
 
     try {
-      cursor = await restaurants.find(query); //this will find all the restaurants from the database
+      cursor = await restaurants.find(query); //this will find all the restaurants from the database with the query
     } catch (e) {
       console.error(`Unable to issue find command, ${e}`);
       return { restaurantsList: [], totalNumRestaurants: 0 };
@@ -46,7 +46,7 @@ export default class RestaurantsDAO {
 
     const displayCursor = cursor
       .limit(restaurantsPerPage)
-      .skip("restaurantsPerPage * page"); //the skip will show us the page number
+      .skip(restaurantsPerPage * page); //the skip will show us the page number
 
     try {
       const restaurantsList = await displayCursor.toArray(); //return the array or the list

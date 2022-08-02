@@ -34,5 +34,18 @@ Backend -
 
 13. In your web browser, go to http://localhost:5000/api/v1/restaurants -> the 5000 is the port in your .env file
 
+14. In the api folder, create a dao (data access object) folder
+
+15. In the dao folder, create a file restaurantsDAO.js
+
+16. Import restaurantsDAO.js inside index.js and insert await RestaurantsDAO.injectDB(client); when we first connect and before we start the server.
+
+17. Import RestaurantsCtrl from "./restaurants.controller.js" inside the restaurants.route.js
+    in the home route, add .get(RestaurantsCtrl.apiGetRestaurants)
+
+18. Now inside api folder create the restaurants.controller.js file.
+
+
+
 Go to your google keeps, go to the video, left off at 24.39. You're about to create the dao folder.
 

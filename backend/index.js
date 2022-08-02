@@ -1,7 +1,7 @@
-import app from "./server.js"; //import the module
+import app from "./server.js"; //import the module (inside server.js)
 import mongodb from "mongodb"; //because we will access mongodb
 import dotenv from "dotenv"; //allows us to access our .env variables
-import RestaurantsDAO from "./dao/restaurantsDAO.js";
+import RestaurantsDAO from "./dao/restaurantsDAO.js"; //data access object
 
 dotenv.config(); 
 const MongoClient = mongodb.MongoClient;
