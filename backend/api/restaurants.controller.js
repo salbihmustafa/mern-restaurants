@@ -30,6 +30,6 @@ export default class RestaurantsController {
             total_results: totalNumRestaurants,
         }
 
-        res.json(response); //send
+        res.json(response); //send response
     }
 }
