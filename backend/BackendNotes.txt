@@ -1,5 +1,7 @@
 Quick Tips:
-Start server: Inside the backend directory, run "nodemon server"
+*Start server: Inside the backend directory, run "nodemon server"
+*JSON Chrome Extension - JSON Formatter
+*Test out api calls on Postman, if doing calls to localhost, install Postman Desktop Agent, otherwise it won't work.
 
 Backend -
 1. create a folder called backend
@@ -44,6 +46,9 @@ Backend -
     in the home route, add .get(RestaurantsCtrl.apiGetRestaurants)
 
 18. Now inside api folder create the restaurants.controller.js file.
+
+19. Go to MongoDB atlas, browse collection, select the collection (restaurants), then click the tab indexes.
+Indexes is a field you will set up to be able to search on. For this example, we will add the field name and the type text. "name": "text",
 
 
 
