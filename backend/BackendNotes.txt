@@ -50,6 +50,13 @@ Backend -
 19. Go to MongoDB atlas, browse collection, select the collection (restaurants), then click the tab indexes.
 Indexes is a field you will set up to be able to search on. For this example, we will add the field name and the type text. "name": "text",
 
+20. Create reviews.controller.js inside api folder
+
+21. Create reviewsDAO.js inside dao folder
+
+22. Make sure to injectDB inside index.js
+
+23. When testing in Postman, make sure your request is JSON (Look at the drop down)
 
 
 Go to your google keeps, go to the video, left off at 24.39. You're about to create the dao folder.
