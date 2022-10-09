@@ -38,7 +38,7 @@ export default class RestaurantsDAO {
     let cursor;
 
     try {
-      cursor = await restaurants.find(query); //this will find all the restaurants from the database with the query
+      cursor = await restaurants.find(query); //this will find all the restaurants from the database with the query, if no query it will return all restaurants
     } catch (e) {
       console.error(`Unable to issue find command, ${e}`);
       return { restaurantsList: [], totalNumRestaurants: 0 };
