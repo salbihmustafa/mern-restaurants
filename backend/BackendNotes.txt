@@ -24,15 +24,25 @@ Backend -
 7. create a file server.js
 
 8. create a .env file, need to find the URI, which can be found in the mongodb, connect, connect your application, copy the URI.
+examples:
+RESTREVIEWS_DB_URI=mongodb+srv://salbih1991:<password>@cluster0.k1jzgc3.mongodb.net/?retryWrites=true&w=majority (Update the password and include the collection before the ? and after /)
 
+RESTREVIEWS_DB_URI=mongodb+srv://salbih1991:mypassword@cluster0.k1jzgc3.mongodb.net/sample_restaurants?retryWrites=true&w=majority
+RESTREVIEWS_NS=sample_restaurants
+PORT=5000
+to access env you do "process.env.<whatever is in the env file)"
 9. create a file index.js (this file will connect to the database and start the server)
 
 10. create a new folder called api
 
 11. inside the api folder, create restaurants.route.js
 
-12. now test the backend server, go to the backend directory in your terminal, type "nodemon server" 
+12. now test the backend server, go to the backend directory in your terminal, type "nodemon server"
+-If you get an error saying nodemon is not recognized, do the following command: npm install -g nodemon
+-Make sure you're using your current IP address, can be found in Network access
+-If you get authentication issues, double check password in databse access.
 (use a demonstration route -> router.route("/").get((req, res) => res.send("hello world")); //demonstration route)
+In the browser check: http://localhost:5000/api/v1/restaurants
 
 13. In your web browser, go to http://localhost:5000/api/v1/restaurants -> the 5000 is the port in your .env file
 

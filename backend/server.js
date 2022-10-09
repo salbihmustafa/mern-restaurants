@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
-import restaurants from "./api/restaurants.route.js";
+import restaurants from "./api/restaurants.route.js"; //where all the routes will be
 
-const app = express();
+const app = express(); //using this to make our server
 
 app.use(cors()); //use middleware
 app.use(express.json()); //server can accept json in a body of a request
