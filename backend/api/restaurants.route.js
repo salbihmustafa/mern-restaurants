@@ -4,7 +4,9 @@ import ReviewsCtrl from "./reviews.controller.js";
 
 const router = express.Router(); //so people can go to multiple routes which will be added
 
-router.route("/").get(RestaurantsCtrl.apiGetRestaurants);
+router.route("/").get(RestaurantsCtrl.apiGetRestaurants); //all restaurants
+router.route("/id/:id").get(RestaurantsCtrl.apiGetRestaurantById); //will show all restaurants and with reviews
+router.route("/cuisines").get(RestaurantsCtrl.apiGetRestaurantCuisines);
 
 router
   .route("/review")

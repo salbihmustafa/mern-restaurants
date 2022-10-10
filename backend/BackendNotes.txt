@@ -69,5 +69,5 @@ Indexes is a field you will set up to be able to search on. For this example, we
 23. When testing in Postman, make sure your request is JSON (Look at the drop down)
 
 
-Go to your google keeps, go to the video, left off at 24.39. You're about to create the dao folder.
+Go to your google keeps, go to the video, left off at 1:01:52. You just created getRestaurantByID function in restaurantsDAO.js
 
