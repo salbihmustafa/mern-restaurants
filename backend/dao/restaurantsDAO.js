@@ -101,9 +101,21 @@ export default class RestaurantsDAO {
           },
         },
       ]
-      return await restaurants.aggregate(pipeline).next();
+      return await restaurants.aggregate(pipeline).next(); //collect the pipeline
     } catch(e) {
       console.error(`Something went wrong in getRestaurantByID: ${e}`);
+      throw e;
+    }
+  }
+
+  static async getCuisines() {
+    let cuisines = [];
+    try{
+      cuisines = await restaurants.distinct("cuisine"); //one of each cuisine
+      return cuisines;
+    }catch(e) {
+      console.error(`Unable to get cuisines, ${e}`);
+      return cuisines;
     }
   }
 }
