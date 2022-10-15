@@ -1,6 +1,6 @@
+import './App.scss';
 import {useState} from "react";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 
 import Navbar from "./components/Navigation/Navbar";
 import AddReview from "./components/add-review";
@@ -26,7 +26,8 @@ function App() {
 
                 <div className="container mt-3">
                     <Routes>
-                        <Route exact path={'/restaurants'} element={<RestaurantsList />}/>
+                        <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
+                        <Route exact path={'/restaurants'} element={<RestaurantsList/>}/>
                         <Route exact path='/restaurants/:id/review'
                                render={(props) => <AddReview {...props} user={user}/>}/>
                         <Route exact path='/restaurants/:id'
