@@ -3,3 +3,5 @@
 2. npm install bootstrap on the root (bootstrap for css)
 
 3. npm install react-router-dom on the root (route urls to different routes)
+
+stopped at 1:20:38
