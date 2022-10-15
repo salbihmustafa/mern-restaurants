@@ -1,5 +1,9 @@
 1. npx create-react-app frontend (this will create basics of react app)
 
-2. npm install bootstrap on the root (bootstrap for css)
+2. npm install react-bootstrap bootstrap
 
-3. npm install react-router-dom on the root (route urls to different routes)
+3. npm install react-router-dom
+
+4. npm install sass
+
+stopped at 1:20:38
