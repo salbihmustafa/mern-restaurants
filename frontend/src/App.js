@@ -3,10 +3,10 @@ import {useState} from "react";
 import {Route, Routes, Navigate} from "react-router-dom";
 
 import Navbar from "./components/Navigation/Navbar";
-import AddReview from "./components/AddReview";
-import RestaurantList from "./components/RestaurantList";
-import Restaurant from "./components/Restaurant";
-import Login from "./components/Login";
+import AddReview from "./pages/AddReview";
+import RestaurantList from "./pages/RestaurantList";
+import Restaurant from "./pages/Restaurant";
+import Login from "./pages/Login";
 
 function App() {
     const [user, setUser] = useState(null);
