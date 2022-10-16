@@ -23,7 +23,7 @@ function App() {
     return (
         <div className="App">
             <Navigation logout={logout} user={user}/>
-            <Container>
+            <Container className="p-3">
                 <Row>
                     <Routes>
                         <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
