@@ -1,4 +1,4 @@
-const RestaurantsList = () => {
+const RestaurantList = () => {
     return (
         <div>
             Restaurants List Page
@@ -6,4 +6,4 @@ const RestaurantsList = () => {
     )
 }
 
-export default RestaurantsList;
+export default RestaurantList;
