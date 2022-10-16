@@ -3,7 +3,7 @@ import {useState} from "react";
 import {Route, Routes, Navigate} from "react-router-dom";
 import {Container, Row} from "react-bootstrap";
 
-import Navbar from "./components/Navigation/Navbar";
+import Navigation from "./components/Navigation";
 import AddReview from "./pages/AddReview";
 import RestaurantList from "./pages/RestaurantList";
 import Restaurant from "./pages/Restaurant";
@@ -22,7 +22,7 @@ function App() {
 
     return (
         <div className="App">
-            <Navbar logout={logout} user={user}/>
+            <Navigation logout={logout} user={user}/>
             <Container>
                 <Row>
                     <Routes>
