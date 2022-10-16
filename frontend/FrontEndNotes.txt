@@ -6,4 +6,6 @@
 
 4. npm install sass
 
+5. npm install axios
+
 stopped at 1:20:38
