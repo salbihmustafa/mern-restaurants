@@ -1,6 +1,6 @@
 import './App.scss';
 import {useState} from "react";
-import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
+import {Route, Routes, Navigate} from "react-router-dom";
 
 import Navbar from "./components/Navigation/Navbar";
 import AddReview from "./components/add-review";
@@ -21,22 +21,17 @@ function App() {
 
     return (
         <div className="App">
-            <Router>
-                <Navbar logout={logout} user={user}/>
-
-                <div className="container mt-3">
-                    <Routes>
-                        <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
-                        <Route exact path={'/restaurants'} element={<RestaurantsList/>}/>
-                        <Route exact path='/restaurants/:id/review'
-                               render={(props) => <AddReview {...props} user={user}/>}/>
-                        <Route exact path='/restaurants/:id'
-                               render={(props) => <Restaurant {...props} user={user}/>}/>
-                        <Route exact path='/login'
-                               render={(props) => <Login {...props} login={login}/>}/>
-                    </Routes>
-                </div>
-            </Router>
+            <Navbar logout={logout} user={user}/>
+            <Routes>
+                <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
+                <Route exact path={'/restaurants'} element={<RestaurantsList/>}/>
+                <Route exact path='/restaurants/:id/review'
+                       element={<AddReview user={user}/>}/>
+                <Route exact path='/restaurants/:id'
+                       element={<Restaurant user={user}/>}/>
+                <Route exact path='/login'
+                       element={<Login login={login}/>}/>
+            </Routes>
         </div>
     );
 }
