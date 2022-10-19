@@ -19,5 +19,9 @@ main{
 }
 
 footer{
+  display: flex;
+  justify-content: center;
   height: 25px;
+  background-color: black;
+  color: #fff;
 }

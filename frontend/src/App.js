@@ -37,7 +37,7 @@ function App() {
                            element={<Login login={login}/>}/>
                 </Routes>
             </main>
-            <footer>Testing</footer>
+            <footer>© 2022 Salbih Mustafa</footer>
         </Container>
     );
 }
