@@ -1,7 +1,7 @@
 import './App.scss';
 import {useState} from "react";
 import {Route, Routes, Navigate} from "react-router-dom";
-import {Container, Row} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 import Navigation from "./components/Navigation";
 import AddReview from "./pages/AddReview";
@@ -21,23 +21,24 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <Navigation logout={logout} user={user}/>
-            <Container className="p-3">
-                <Row>
-                    <Routes>
-                        <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
-                        <Route exact path={'/restaurants'} element={<RestaurantList/>}/>
-                        <Route exact path='/restaurants/:id/review'
-                               element={<AddReview user={user}/>}/>
-                        <Route exact path='/restaurants/:id'
-                               element={<Restaurant user={user}/>}/>
-                        <Route exact path='/login'
-                               element={<Login login={login}/>}/>
-                    </Routes>
-                </Row>
-            </Container>
-        </div>
+        <Container className="app-container">
+            <header>
+                <Navigation logout={logout} user={user}/>
+            </header>
+            <main>
+                <Routes>
+                    <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
+                    <Route exact path={'/restaurants'} element={<RestaurantList/>}/>
+                    <Route exact path='/restaurants/:id/review'
+                           element={<AddReview user={user}/>}/>
+                    <Route exact path='/restaurants/:id'
+                           element={<Restaurant user={user}/>}/>
+                    <Route exact path='/login'
+                           element={<Login login={login}/>}/>
+                </Routes>
+            </main>
+            <footer>Testing</footer>
+        </Container>
     );
 }
 

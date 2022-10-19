@@ -27,7 +27,6 @@ const Navigation = ({logout, user}) => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-
     )
 }
 

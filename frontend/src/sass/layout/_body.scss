@@ -1,0 +1,23 @@
+html, body{
+  overflow: hidden;
+  margin: 0;
+}
+
+header{
+  height: 75px;
+}
+
+.app-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex: 1;
+  overflow-x: hidden;
+}
+
+footer{
+  height: 25px;
+}
