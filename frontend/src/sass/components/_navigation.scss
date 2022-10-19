@@ -1,3 +1,31 @@
+$navbar: rgba(0,0,0,0.8);
+$nav-base: #e5e1e1;
+$nav-hover-select: #fff;
+
 .navbar{
   height: 100%;
+  background-color: $navbar;
 }
+
+.navbar-brand {
+  color: $nav-base;
+  &:hover{
+    color: $nav-hover-select;
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    color: $nav-base;
+
+    &:hover{
+      color: $nav-hover-select;
+    }
+  }
+
+  .nav-link.active {
+    color: $nav-hover-select;
+  }
+}
+
+

@@ -3,7 +3,7 @@ import {LinkContainer} from "react-router-bootstrap";
 
 const Navigation = ({logout, user}) => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg">
             <Container>
                 <Navbar.Brand href="/restaurants">Restaurant Reviews</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>

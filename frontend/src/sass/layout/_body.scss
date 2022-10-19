@@ -1,6 +1,6 @@
 html, body{
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
 }
 
 .app-container{
@@ -12,12 +12,13 @@ html, body{
 main{
   flex: 1;
   overflow-x: hidden;
+  padding: 1rem;
 }
 
 footer{
   display: flex;
   justify-content: center;
   height: 25px;
-  background-color: black;
-  color: #fff;
+  background-color: rgba(0,0,0,0.8);
+  color: #e5e1e1;
 }

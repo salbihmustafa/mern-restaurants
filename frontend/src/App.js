@@ -21,24 +21,26 @@ function App() {
     }
 
     return (
-        <Container className="app-container">
+        <div className="app-container">
             <header>
                 <Navigation logout={logout} user={user}/>
             </header>
             <main>
-                <Routes>
-                    <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
-                    <Route exact path={'/restaurants'} element={<RestaurantList/>}/>
-                    <Route exact path='/restaurants/:id/review'
-                           element={<AddReview user={user}/>}/>
-                    <Route exact path='/restaurants/:id'
-                           element={<Restaurant user={user}/>}/>
-                    <Route exact path='/login'
-                           element={<Login login={login}/>}/>
-                </Routes>
+                <Container fluid>
+                    <Routes>
+                        <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
+                        <Route exact path={'/restaurants'} element={<RestaurantList/>}/>
+                        <Route exact path='/restaurants/:id/review'
+                               element={<AddReview user={user}/>}/>
+                        <Route exact path='/restaurants/:id'
+                               element={<Restaurant user={user}/>}/>
+                        <Route exact path='/login'
+                               element={<Login login={login}/>}/>
+                    </Routes>
+                </Container>
             </main>
             <footer>© 2022 Salbih Mustafa</footer>
-        </Container>
+        </div>
     );
 }
 
