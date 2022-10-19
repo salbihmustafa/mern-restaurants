@@ -26,7 +26,7 @@ function App() {
                 <Navigation logout={logout} user={user}/>
             </header>
             <main>
-                <Container fluid>
+                <Container>
                     <Routes>
                         <Route path='*' element={<Navigate to='/restaurants' replace/>}/>
                         <Route exact path={'/restaurants'} element={<RestaurantList/>}/>
