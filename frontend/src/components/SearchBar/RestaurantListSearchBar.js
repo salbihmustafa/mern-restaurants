@@ -1,10 +1,10 @@
-import {Dropdown} from "react-bootstrap";
+import {Dropdown, Form, Button} from "react-bootstrap";
 
 const RestaurantListSearchBar = () => {
     return (
         <>
             <Dropdown>
-                <Dropdown.Toggle variant="outline-secondary" id="dropdown-basic">
+                <Dropdown.Toggle variant="outline-primary" id="dropdown-basic" className="searchbar-dropdown-toggle">
                     Actions
                 </Dropdown.Toggle>
 
@@ -14,7 +14,15 @@ const RestaurantListSearchBar = () => {
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
-
+            <Form className="d-flex">
+                <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                />
+                <Button>Search</Button>
+            </Form>
         </>
     )
 }

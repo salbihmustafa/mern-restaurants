@@ -14,10 +14,10 @@ const RestaurantCard = ({restaurantTitle, cuisineText, addressText}) => {
                 <Container>
                     <Row>
                         <Col>
-                            <Button variant="outline-primary">Reviews</Button>
+                            <Button>Reviews</Button>
                         </Col>
                         <Col>
-                            <Button variant="outline-primary">Maps</Button>
+                            <Button>Maps</Button>
                         </Col>
                     </Row>
                 </Container>
