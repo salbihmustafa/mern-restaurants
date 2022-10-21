@@ -1,30 +1,31 @@
-$navbar: rgba(0,0,0,0.8);
-$nav-base: #e5e1e1;
-$nav-hover-select: #fff;
+$background-white: $white;
+$primary-color: $red-500;
+$secondary-color: $red-200;
+$active-color: $red-700;
 
 .navbar{
   height: 100%;
-  background-color: $navbar;
+  background-color: $white;
 }
 
 .navbar-brand {
-  color: $nav-base;
+  color: $primary-color;
   &:hover{
-    color: $nav-hover-select;
+    color: $secondary-color;
   }
 }
 
 .navbar-nav {
   .nav-link {
-    color: $nav-base;
+    color: $primary-color;
 
     &:hover{
-      color: $nav-hover-select;
+      color: $secondary-color;
     }
   }
 
   .nav-link.active {
-    color: $nav-hover-select;
+    color: $active-color;
   }
 }
 

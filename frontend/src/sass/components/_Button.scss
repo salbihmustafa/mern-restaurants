@@ -1,10 +1,10 @@
-$button-white: #fff;
-$button-primary-color: #818080;
-$button-secondary-color: #c2bdbd;
+$button-white: $white;
+$button-primary-color: $red-500;
+$button-secondary-color: $red-200;
 
 .btn {
   background-color: $button-white;
-  border: 1px solid $button-secondary-color;
+  border: 1px solid $button-primary-color;
   color: $button-primary-color;
 
   &:hover{
