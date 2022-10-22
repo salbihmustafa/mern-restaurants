@@ -1,9 +1,16 @@
-.searchbar-dropdown-toggle{
-  //top-left, top-right, bottom-right, bottom-left
-  border-radius: .375rem 0 0 .375rem;
+.searchbar-dropdown-toggle {
+  .dropdown-toggle {
+    //top-left, top-right, bottom-right, bottom-left
+    border-radius: .375rem 0 0 .375rem;
+    @media only screen and (min-width: 768px){
+      &:before {
+        content:"Actions "
+      }
+    }
+  }
 }
 
-.search-bar{
+.search-bar {
   //top-left, top-right, bottom-right, bottom-left
   border-radius: 0 .375rem .375rem 0;
 }

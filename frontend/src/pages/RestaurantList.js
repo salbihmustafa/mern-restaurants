@@ -6,7 +6,7 @@ const RestaurantList = () => {
 
     return (
         <>
-            <Row className="p-4">
+            <Row>
                 <RestaurantListSearchBar />
             </Row>
             <Row className="rest-list-container">

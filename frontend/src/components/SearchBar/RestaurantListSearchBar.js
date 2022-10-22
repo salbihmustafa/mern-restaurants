@@ -1,20 +1,18 @@
-import {Dropdown, Form, Button} from "react-bootstrap";
+import {Dropdown, DropdownButton, Form, Button} from "react-bootstrap";
 
 const RestaurantListSearchBar = () => {
+    const handleDropdownSelect = (evt) => {
+        console.log(evt);
+    }
+
     return (
         <>
-            <Form className="d-flex">
-                <Dropdown>
-                    <Dropdown.Toggle id="dropdown-basic" className="searchbar-dropdown-toggle">
-                        Actions
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
+            <Form className="d-flex searchbar-form-container">
+                <DropdownButton className="searchbar-dropdown-toggle" title="" onSelect={handleDropdownSelect}>
+                    <Dropdown.Item eventKey='Action'>Action</Dropdown.Item>
+                    <Dropdown.Item eventKey='Another Action'>Another action</Dropdown.Item>
+                    <Dropdown.Item eventKey='Something else'>Something else</Dropdown.Item>
+                </DropdownButton>
                 <Form.Control
                     type="search"
                     placeholder="Search"
