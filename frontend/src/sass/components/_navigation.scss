@@ -1,31 +1,35 @@
-$background-white: $white;
-$primary-color: $red-500;
-$secondary-color: $red-200;
-$active-color: $red-700;
+$text: #4A5568;
+$highlight: #0095FA;
+$primary-background: #F5F9FF;
+$secondary-background: #F1F1E6;
+$body-background: $gray-100;
 
 .navbar{
   height: 100%;
   background-color: $white;
+  box-shadow: 0 2px 7px 0 rgba(94,84,84,0.55);
+  -webkit-box-shadow: 0 2px 7px 0 rgba(94,84,84,0.55);
+  -moz-box-shadow: 0 2px 7px 0 rgba(94,84,84,0.55);
 }
 
 .navbar-brand {
-  color: $primary-color;
+  color: $text;
   &:hover{
-    color: $secondary-color;
+    color: $highlight;
   }
 }
 
 .navbar-nav {
   .nav-link {
-    color: $primary-color;
+    color: $text;
 
     &:hover{
-      color: $secondary-color;
+      color: $highlight;
     }
   }
 
   .nav-link.active {
-    color: $active-color;
+    color: $highlight;
   }
 }
 

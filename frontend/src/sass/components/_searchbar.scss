@@ -1,10 +1,9 @@
-.rest-search-bar{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+.searchbar-dropdown-toggle{
+  //top-left, top-right, bottom-right, bottom-left
+  border-radius: .375rem 0 0 .375rem;
 }
 
-.searchbar-dropdown-toggle{
-  //top left, top right, bottom right, bottom left
-  border-radius: .375rem 0 0 .375rem;
+.search-bar{
+  //top-left, top-right, bottom-right, bottom-left
+  border-radius: 0 .375rem .375rem 0;
 }

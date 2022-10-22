@@ -6,9 +6,9 @@ const RestaurantList = () => {
 
     return (
         <>
-            <div className="rest-search-bar">
+            <Row className="p-4">
                 <RestaurantListSearchBar />
-            </div>
+            </Row>
             <Row className="rest-list-container">
                 <RestaurantCard restaurantTitle="Riviera Caterer" cuisineText="American"
                                 addressText="2780 Stillwell Avenue, 11224"/>
