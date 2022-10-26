@@ -7,7 +7,7 @@ const RestaurantListSearchBar = () => {
 
     return (
         <>
-            <Form className="d-flex searchbar-form-container">
+            <Form className="d-flex">
                 <DropdownButton className="searchbar-dropdown-toggle" title="" onSelect={handleDropdownSelect}>
                     <Dropdown.Item eventKey='Action'>Action</Dropdown.Item>
                     <Dropdown.Item eventKey='Another Action'>Another action</Dropdown.Item>
@@ -16,7 +16,7 @@ const RestaurantListSearchBar = () => {
                 <Form.Control
                     type="search"
                     placeholder="Search"
-                    className="me-2 search-bar"
+                    className="search-bar"
                     aria-label="Search"
                 />
                 <Button>Search</Button>
