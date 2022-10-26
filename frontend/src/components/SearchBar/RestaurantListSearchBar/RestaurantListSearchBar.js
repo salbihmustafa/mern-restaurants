@@ -1,8 +1,17 @@
 import {Dropdown, DropdownButton, Form, Button} from "react-bootstrap";
+import {useState, useEffect} from "react";
+import dropDownValues from "../../DropDown/dropDownValues";
 
 const RestaurantListSearchBar = () => {
-    const handleDropdownSelect = (evt) => {
-        console.log(evt);
+    const {restSearchPlaceholder} = dropDownValues();
+    const [searchPlaceHolder, setSearchPlaceHolder] = useState(restSearchPlaceholder.name);
+
+    const handleDropdownSelect = (value) => {
+        if(value === "name"){
+            setSearchPlaceHolder(restSearchPlaceholder.name);
+        }else if(value === "zip"){
+            setSearchPlaceHolder(restSearchPlaceholder.zip);
+        }
     }
 
     return (
@@ -15,7 +24,7 @@ const RestaurantListSearchBar = () => {
                 </DropdownButton>
                 <Form.Control
                     type="search"
-                    placeholder="Search"
+                    placeholder={searchPlaceHolder}
                     className="me-2 search-bar"
                     aria-label="Search"
                 />

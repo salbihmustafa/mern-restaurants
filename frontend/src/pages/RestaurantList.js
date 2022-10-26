@@ -1,6 +1,6 @@
 import {Row} from "react-bootstrap";
 import RestaurantCard from "../components/Cards/RestaurantCard";
-import RestaurantListSearchBar from "../components/SearchBar/RestaurantListSearchBar";
+import RestaurantListSearchBar from "../components/SearchBar/RestaurantListSearchBar/RestaurantListSearchBar";
 
 const RestaurantList = () => {
 
